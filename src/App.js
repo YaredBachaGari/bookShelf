@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState } from "react";
+import Addbooks from "./Components /Addbooks";
+import SeachInputField from "./Components /SeachInputField";
 
 function App() {
   const [showSearchPage, setShowSearchpage] = useState(false);
@@ -8,20 +10,7 @@ function App() {
     <div className="app">
       {showSearchPage ? (
         <div className="search-books">
-          <div className="search-books-bar">
-            <a
-              className="close-search"
-              onClick={() => setShowSearchpage(!showSearchPage)}
-            >
-              Close
-            </a>
-            <div className="search-books-input-wrapper">
-              <input
-                type="text"
-                placeholder="Search by title, author, or ISBN"
-              />
-            </div>
-          </div>
+          <SeachInputField />
           <div className="search-books-results">
             <ol className="books-grid"></ol>
           </div>
@@ -272,9 +261,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="open-search">
-            <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-          </div>
+          <Addbooks />
         </div>
       )}
     </div>
