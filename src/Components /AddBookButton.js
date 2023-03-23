@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Addbooks = () => {
+const AddBookButton = () => {
   return (
     <div className="open-search">
       {/* <Link to="/search">add book</Link> */}
@@ -9,4 +9,4 @@ const Addbooks = () => {
   );
 };
 
-export default Addbooks;
+export default AddBookButton;

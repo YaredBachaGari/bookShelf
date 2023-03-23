@@ -1,52 +1,40 @@
-import React from "react";
-import Addbooks from "../Components /Addbooks";
-import BookCard from "../Components /BookCard";
-const ShelfPage = () => {
+import AddBookButton from "../Components /AddBookButton";
+import Heading from "../Components /Heading";
+import HOC from "../Components /HOC";
+import BookShelf from "../Components /BookShelf";
+import { useEffect, useState } from "react";
+import { getAll } from "../BooksAPI";
+
+const ShelfPage = ({ bookList }) => {
+  const CategoryOptions = [
+    { id: 1, category: "Currently Reading", value: "currentlyReading" },
+    { id: 2, category: "Want to Read", value: "wantToRead" },
+    { id: 3, category: "Read", value: "read" },
+    { id: 4, category: "None", value: "none" },
+  ];
+  console.log(bookList);
   return (
-    <div>
+    <div className="app">
       <div className="list-books">
-        <div className="list-books-title">
-          <h1>MyReads</h1>
-        </div>
+        <Heading title={"MyReads"} />
         <div className="list-books-content">
           <div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Currently Reading</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                  <li>
-                  {/* map currently reading */}
-                    <BookCard />
-                  </li>
-                </ol>
-              </div>
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Want to Read</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                  <li>
-                    <BookCard />
-                  </li>
-                </ol>
-              </div>
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Read</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                  <li>
-                    <BookCard />
-                  </li>
-                </ol>
-              </div>
-            </div>
+            {CategoryOptions?.filter(
+              (option) => option.category !== "None"
+            )?.map((shelf) => (
+              <BookShelf
+                key={shelf?.id}
+                bookList={bookList}
+                categoryName={shelf?.category}
+                CategoryOptions={CategoryOptions}
+              />
+            ))}
           </div>
         </div>
-        <Addbooks />
+        <AddBookButton />
       </div>
     </div>
   );
 };
 
-export default ShelfPage;
+export default HOC(ShelfPage);
