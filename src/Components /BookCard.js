@@ -3,7 +3,7 @@ import DropDownMenu from "./DropDownMenu";
 
 const BookCard = ({ bookData, CategoryOptions, setSelection }) => {
   const { imageLinks, title, authors } = bookData;
-  const allAuthors = authors.join(", ");
+  const allAuthors = authors?.join(", ");
   return (
     <div className="book">
       <div className="book-top">

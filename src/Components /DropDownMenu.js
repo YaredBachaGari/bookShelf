@@ -8,8 +8,8 @@ const DropDownMenu = ({ book, CategoryOptions, setSelection }) => {
   };
   return (
     <div className="book-shelf-changer">
-      <select onChange={handleChange}>
-        <option value="none" disabled>
+      <select defaultValue="NA" onChange={handleChange}>
+        <option value="NA" disabled>
           Move to...
         </option>
         {CategoryOptions?.map((menu) => (

@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
-import BookCard from "../Components /BookCard";
 import SeachInputField from "../Components /SeachInputField";
 import HigherOrderComponent from "../Components /HOC";
+import { search } from "../BooksAPI";
+import Catalog from "../Components /Catalog";
+import { debounce } from "../Utils/helper";
 
-const SearchPage = ({ bookList, setSelection }) => {
-  const [searchText, setSearchText] = useState();
+const SearchPage = ({ setSelection, CategoryOptions }) => {
+  const [searchText, setSearchText] = useState("");
   const [foundBooks, setFoundBooks] = useState();
 
   useEffect(() => {
     if (searchText) {
-      const availableBooks = bookList?.filter((book) =>
-        book?.title?.toLowerCase().includes(searchText?.toLowerCase())
-      );
-      setFoundBooks(availableBooks);
+      const handleSearch = async () => {
+        const availableBooks = await search(searchText, 20);
+        await setFoundBooks(availableBooks);
+      };
+      debounce(handleSearch(), 500);
     } else {
-      setFoundBooks(null);
+      setFoundBooks([]);
     }
   }, [searchText]);
 
@@ -27,11 +30,15 @@ const SearchPage = ({ bookList, setSelection }) => {
         />
         <div className="search-books-results">
           <ol className="books-grid">
-            <li>
-              {foundBooks?.map((book) => (
-                <BookCard key={book?.id} book={book} />
+            {foundBooks?.length > 0 &&
+              foundBooks?.map((book) => (
+                <Catalog
+                  key={book?.id}
+                  singleBook={book}
+                  CategoryOptions={CategoryOptions}
+                  setSelection={setSelection}
+                />
               ))}
-            </li>
           </ol>
         </div>
       </div>
