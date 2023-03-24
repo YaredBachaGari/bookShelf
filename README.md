@@ -45,7 +45,6 @@ The Book Shelf App was developed as part of the Udacity React Nanodegree program
 
 The Book Shelf App is a valuable tool for avid readers who want to keep their reading list organized and easily accessible. With its simple and user-friendly interface, users can easily add new books to their list, track their progress, and keep their reading goals in sight. Overall, the Book Shelf App is a practical and efficient solution for anyone looking to streamline their reading list management.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Built With
@@ -53,10 +52,6 @@ The Book Shelf App is a valuable tool for avid readers who want to keep their re
 While this app uses Udacity's API at the back the front end is developed using React 18 framework.
 
 * [![React][React.js]][React-url]
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -92,8 +87,6 @@ Follow below steps:
    ```sh
    npm run start
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
