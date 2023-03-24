@@ -3,7 +3,7 @@ import BookCard from "../Components /BookCard";
 import SeachInputField from "../Components /SeachInputField";
 import HigherOrderComponent from "../Components /HOC";
 
-const SearchPage = ({ bookList }) => {
+const SearchPage = ({ bookList, setSelection }) => {
   const [searchText, setSearchText] = useState();
   const [foundBooks, setFoundBooks] = useState();
 

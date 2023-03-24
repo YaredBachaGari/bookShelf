@@ -5,7 +5,7 @@ import BookShelf from "../Components /BookShelf";
 import { useEffect, useState } from "react";
 import { getAll } from "../BooksAPI";
 
-const ShelfPage = ({ bookList }) => {
+const ShelfPage = ({ bookList, setSelection }) => {
   const CategoryOptions = [
     { id: 1, category: "Currently Reading", value: "currentlyReading" },
     { id: 2, category: "Want to Read", value: "wantToRead" },
@@ -27,6 +27,7 @@ const ShelfPage = ({ bookList }) => {
                 bookList={bookList}
                 categoryName={shelf?.category}
                 CategoryOptions={CategoryOptions}
+                setSelection={setSelection}
               />
             ))}
           </div>

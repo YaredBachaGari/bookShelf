@@ -1,7 +1,7 @@
 import React from "react";
 import DropDownMenu from "./DropDownMenu";
 
-const BookCard = ({ bookData, CategoryOptions }) => {
+const BookCard = ({ bookData, CategoryOptions, setSelection }) => {
   const { imageLinks, title, authors } = bookData;
   const allAuthors = authors.join(", ");
   return (
@@ -15,7 +15,11 @@ const BookCard = ({ bookData, CategoryOptions }) => {
             backgroundImage: `url(${imageLinks?.thumbnail})`,
           }}
         ></div>
-        <DropDownMenu CategoryOptions={CategoryOptions} />
+        <DropDownMenu
+          CategoryOptions={CategoryOptions}
+          book={bookData}
+          setSelection={setSelection}
+        />
       </div>
       <div className="book-title">{title}</div>
       <div className="book-authors">{allAuthors}</div>

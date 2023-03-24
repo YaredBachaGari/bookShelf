@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 const SeachInputField = ({ searchText, setSearchText }) => {
   return (
     <div className="search-books-bar">
-      {/* <Link className="close-search" to='/'>Close</Link> */}
-      <a className="close-search">Close</a>
+      <Link className="close-search" to="/">
+        Close
+      </Link>
       <div className="search-books-input-wrapper">
         <input
           type="text"
