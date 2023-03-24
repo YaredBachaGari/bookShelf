@@ -19,6 +19,7 @@ const HOC = (OriginalComponent) => {
       };
       handleData();
     }, [selection]);
+
     return (
       <OriginalComponent
         bookList={bookList}
