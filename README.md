@@ -40,26 +40,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The Book Shelf App is a React-based web application designed to help users keep track of their reading list. The app provides an intuitive user interface that enables users to organize books into three categories: "Read," "Currently Reading," and "Want to Read." Additionally, users can search for books by title or author and add them to their reading list with ease.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The Book Shelf App was developed as part of the Udacity React Nanodegree program, which required the use of Udacity's API for fetching book data. As a result, the app is built to meet the specific requirements outlined by the program's instructors.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+The Book Shelf App is a valuable tool for avid readers who want to keep their reading list organized and easily accessible. With its simple and user-friendly interface, users can easily add new books to their list, track their progress, and keep their reading goals in sight. Overall, the Book Shelf App is a practical and efficient solution for anyone looking to streamline their reading list management.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+While this app uses Udacity's API at the back the front end is developed using React 18 framework.
 
 * [![React][React.js]][React-url]
 
@@ -71,60 +63,38 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To run the apprication on your local first clone or fork the code from remote repository.
+* Clone
+  ```sh
+  git clone https://github.com/YaredBachaGari/bookShelf.git
+  ```
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+For running this application you need to install node version 14. the latest is more preferable. 
 * npm
   ```sh
   npm install npm@latest -g
   ```
 
-### Installation
+### Installation and Running code
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Follow below steps:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. cd into the project folder 
+     ```sh
+       cd bookshelf/
+     ```
+2. Install all npm packages
+      ```sh
+      npm install 
+      ```
+3. To run the application 
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   npm run start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
